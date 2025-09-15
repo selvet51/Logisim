@@ -3,9 +3,6 @@
   This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
-    <tool name="Splitter">
-      <a name="facing" val="north"/>
-    </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
     </tool>
@@ -22,7 +19,7 @@
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
   <lib desc="file#resta8Bits.circ" name="12"/>
-  <main name="SUB"/>
+  <main name="SBB"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -55,9 +52,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="SUB">
+  <circuit name="SBB">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="SUB"/>
+    <a name="circuit" val="SBB"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(120,40)" name="Tunnel">
@@ -73,6 +70,10 @@
     <comp lib="0" loc="(170,20)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </comp>
     <comp lib="0" loc="(200,120)" name="Splitter">
       <a name="bit1" val="0"/>
@@ -130,9 +131,6 @@
     <comp lib="0" loc="(270,300)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(300,100)" name="Constant">
-      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(530,240)" name="Constant">
       <a name="value" val="0x0"/>
@@ -203,13 +201,18 @@
     <wire from="(120,40)" to="(130,40)"/>
     <wire from="(130,40)" to="(130,50)"/>
     <wire from="(170,120)" to="(200,120)"/>
+    <wire from="(180,130)" to="(180,220)"/>
+    <wire from="(180,130)" to="(220,130)"/>
+    <wire from="(180,220)" to="(190,220)"/>
     <wire from="(200,370)" to="(200,380)"/>
     <wire from="(200,380)" to="(290,380)"/>
     <wire from="(200,420)" to="(210,420)"/>
+    <wire from="(210,140)" to="(280,140)"/>
     <wire from="(210,400)" to="(210,420)"/>
     <wire from="(210,400)" to="(270,400)"/>
     <wire from="(210,70)" to="(230,70)"/>
     <wire from="(220,100)" to="(250,100)"/>
+    <wire from="(220,110)" to="(220,130)"/>
     <wire from="(220,80)" to="(230,80)"/>
     <wire from="(220,90)" to="(260,90)"/>
     <wire from="(230,70)" to="(230,80)"/>
@@ -227,6 +230,8 @@
     <wire from="(270,400)" to="(310,400)"/>
     <wire from="(270,490)" to="(320,490)"/>
     <wire from="(270,60)" to="(300,60)"/>
+    <wire from="(280,100)" to="(280,140)"/>
+    <wire from="(280,100)" to="(300,100)"/>
     <wire from="(290,220)" to="(380,220)"/>
     <wire from="(290,230)" to="(380,230)"/>
     <wire from="(290,240)" to="(380,240)"/>
