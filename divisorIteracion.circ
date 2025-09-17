@@ -177,7 +177,9 @@
     <comp lib="2" loc="(780,200)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="3" loc="(610,270)" name="Comparator"/>
+    <comp lib="3" loc="(610,270)" name="Comparator">
+      <a name="mode" val="unsigned"/>
+    </comp>
     <comp lib="3" loc="(650,160)" name="Subtractor"/>
     <wire from="(200,160)" to="(360,160)"/>
     <wire from="(200,90)" to="(240,90)"/>
